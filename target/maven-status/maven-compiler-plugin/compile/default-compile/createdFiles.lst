@@ -1,0 +1,12 @@
+com\cinnamonshake\LoginController.class
+com\cinnamonshake\models\BMS.class
+com\cinnamonshake\BMSsetupController.class
+com\cinnamonshake\RegisterController.class
+com\cinnamonshake\Main.class
+com\cinnamonshake\models\User.class
+com\cinnamonshake\services\testServices.class
+com\cinnamonshake\UpdatePasswordController.class
+com\cinnamonshake\models\Battery.class
+com\cinnamonshake\DashboardController.class
+com\cinnamonshake\services\UserMngmnt.class
+module-info.class
