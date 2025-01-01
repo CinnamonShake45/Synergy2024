@@ -5,8 +5,8 @@ module com.cinnamonshake {
     requires java.sql;
     requires javafx.web;
 
+    exports com.cinnamonshake to javafx.graphics;
     opens com.cinnamonshake to javafx.graphics, javafx.fxml, javafx.web;
-    exports com.cinnamonshake;
     exports com.cinnamonshake.models;
     exports com.cinnamonshake.services;
 }
