@@ -1,5 +1,5 @@
-# old module-java backup
-# rename this to module-info.java
+// old module-java backup
+// rename this to module-info.java
 
 module com.cinnamonshake {
     requires transitive javafx.controls;
