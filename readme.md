@@ -87,9 +87,9 @@ Extras
 Here are some pictures of the actual IoT BMS hardware:
 
 <p align="center">
-  <img src="./docs/bmsBoxed.png" width="300" />  &nbsp;&nbsp;
-  <img src="./docs/bmsUnboxed.png" width="300" />  &nbsp;&nbsp;
+  <img src="./docs/bmsUnboxed.png" width="300" /> 
   <img src="./docs/bmsOLED.png" width="300" />
+  <img src="./docs/bmsBoxed.png" width="300" />
 </p>
 
 #### That's all for now, Thanks for reading!
