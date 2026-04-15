@@ -8,7 +8,7 @@
 
 This is a very trivial dashboard JavaFX application, loosely following the MVC architecture. There are no APIs, there are no micro-services, its all monolithic. As long as you have Java-21, you should be able to run provided SmartBMSApp.jar with no other dependencies (its a fat jar, so every dependency is packaged with it)
 
-
+![Dashboard Screnshot](./docs/dashboard.png)
 
 #### How to use 
 
