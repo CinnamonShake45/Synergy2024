@@ -10,10 +10,11 @@ This is a very trivial dashboard JavaFX application, loosely following the MVC a
 
 ![Dashboard Screnshot](./docs/dashboard.png)
 
-#### How to use 
+How to use 
+---
 
 
-Now the main purpose of the app was to display telemetry data pushed by my IoT BMS device in the form of graphs. For that you don't need anything. Follow these steps: 
+The main purpose of the app was to display telemetry data pushed by my IoT BMS device in the form of graphs. For that you don't need anything. Follow these steps: 
 
 
 
@@ -35,7 +36,20 @@ How it works
 
 
 
-###### Source code
+#### Overview
+
+
+
+* The user first either logs in or registers themself. 
+* In case of login, if the Database connection was successful, the provided credentials are matched against those in database Users table, and logged in if found, otherwise error is displayed
+* In case of register, the new user is added to the database (in case successful connection). Regardless, we now have a UserMngmnt object that will be passed across the Views, retaining this state. 
+* The user can't immediately see any graphs, since the BMS details are still empty. Use update BMS to fill in the necessary details. By necessary we mean the BMS ID parameter. 
+* The BMS ID parameter is basically the channel ID from Thingspeak. Using their /channels/{id}/charts/ endpoint, it becomes possible to render the entire graph directly. 
+* Where does the database fit in all this? The database is simply for user management, maintaining data for multiple users, multiple batteries and multiple BMSs.
+
+
+
+#### Source code explanation
 
 
 
@@ -56,21 +70,8 @@ Lastly, inside src/main/resources/ you'll find the FXML files, that is the diffe
 
 
 
-###### Overview
-
-
-
-* The user first either logs in or registers themself. 
-* In case of login, if the Database connection was successful, the provided credentials are matched against those in database Users table, and logged in if found, otherwise error is displayed
-* In case of register, the new user is added to the database (in case successful connection). Regardless, we now have a UserMngmnt object that will be passed across the Views, retaining this state. 
-* The user can't immediately see any graphs, since the BMS details are still empty. Use update BMS to fill in the necessary details. By necessary we mean the BMS ID parameter. 
-* The BMS ID parameter is basically the channel ID from Thingspeak. Using their /channels/{id}/charts/ endpoint, it becomes possible to render the entire graph directly. 
-* Where does the database fit in all this? The database is simply for user management, maintaining data for multiple users, multiple batteries and multiple BMSs.
-
-
-
-#### Future Scope 
-
+Future Scope 
+---
 
 
 This project is done for now. It was done the day it was committed. There probably are multiple security flaws (like storing un-hashed passwords directly in the database), but then again, the purpose of the project was to just get it (the UI Dashboard) done. There would probably be no more further changes be made here. 
@@ -79,6 +80,17 @@ If I am in the mood, I may add the SQL commands to create the various tables. Ot
 However, since this was a really nice concept, inspired from this, I'm developing a new project, also simple but better than this current one. Its called [Synergetic](https://github.com/CinnamonShake45/Synergetic).
 
 
+
+Extras
+---
+
+Here are some pictures of the actual IoT BMS hardware:
+
+<p align="center">
+  <img src="./docs/bmsBoxed.png" width="300" />  &nbsp;&nbsp;
+  <img src="./docs/bmsUnboxed.png" width="300" />  &nbsp;&nbsp;
+  <img src="./docs/bmsOLED.png" width="300" />
+</p>
 
 #### That's all for now, Thanks for reading!
 
